@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0d0b0c" />
+
+  <title>A Little Something I Need to Say</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="ambient ambient-1"></div>
+  <div class="ambient ambient-2"></div>
+  <div id="particles"></div>
+
+  <!-- Music -->
+  <audio id="bgMusic" loop></audio>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+    ♫
+  </button>
+
+  <!-- ============================= -->
+  <!-- HERO -->
+  <!-- ============================= -->
+
+  <header class="hero" id="top">
+
+    <div class="hero-content reveal">
+
+      <p class="eyebrow">A little something from me</p>
+
+      <h1>
+        I need to<br>
+        <span>tell you something…</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Please give me a few minutes to read this.
+      </p>
+
+      <button class="continue-btn" onclick="scrollToSection('realized')">
+        Continue
+        <span>↓</span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+    <!-- ============================= -->
+    <!-- SECTION 1 -->
+    <!-- ============================= -->
+
+    <section class="section" id="realized">
+
+      <div class="section-inner">
+
+        <div class="section-number reveal">
+          01
+        </div>
+
+        <div class="section-content reveal">
+
+          <p class="eyebrow">Something I finally understood</p>
+
+          <h2>
+            I realized something.
+          </h2>
+
+          <div class="letter-text">
+
+            <p>
+              I've been thinking about the way I've treated you, and
+              honestly, I've realized that I made mistakes.
+            </p>
+
+            <p>
+              There were times when I didn't give you enough of my time.
+              Times when I didn't give you the attention you deserved.
+              And maybe, without realizing it, I made you feel like you
+              weren't important to me.
+            </p>
+
+            <p>
+              The truth is, I didn't always understand your feelings
+              properly when I should have.
+            </p>
+
+            <p>
+              I know now that what I intended isn't always what another
+              person experiences. My intentions may not have been bad,
+              but my actions still mattered.
+            </p>
+
+            <p class="highlight">
+              And I finally understand that.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SECTION 2 -->
+    <!-- ============================= -->
+
+    <section class="section mistakes-section">
+
+      <div class="section-inner column">
+
+        <div class="center-heading reveal">
+
+          <p class="eyebrow">Looking back honestly</p>
+
+          <h2>I know where I went wrong.</h2>
+
+          <p>
+            I don't want to make excuses for these things.
+            I just want you to know that I see them now.
+          </p>
+
+        </div>
+
+
+        <div class="mistake-grid">
+
+          <article class="mistake-card reveal">
+
+            <div class="card-top">
+              <span>01</span>
+              <span class="plus">+</span>
+            </div>
+
+            <h3>I didn't give you enough time.</h3>
+
+            <div class="card-hidden">
+              <p>
+                There were moments when you deserved my time and attention,
+                and I wasn't there the way I should have been.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="mistake-card reveal">
+
+            <div class="card-top">
+              <span>02</span>
+              <span class="plus">+</span>
+            </div>
+
+            <h3>I didn't always listen properly.</h3>
+
+            <div class="card-hidden">
+              <p>
+                Sometimes I listened without really understanding what
+                you were trying to tell me. I should have paid more
+                attention to what you were feeling.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="mistake-card reveal">
+
+            <div class="card-top">
+              <span>03</span>
+              <span class="plus">+</span>
+            </div>
+
+            <h3>I took your presence for granted.</h3>
+
+            <div class="card-hidden">
+              <p>
+                Having you in my life became something I got too
+                comfortable with, instead of something I consciously
+                appreciated.
+              </p>
+            </div>
+
+          </article>
+
+
+          <article class="mistake-card reveal">
+
+            <div class="card-top">
+              <span>04</span>
+              <span class="plus">+</span>
+            </div>
+
+            <h3>I didn't understand how my actions felt.</h3>
+
+            <div class="card-hidden">
+              <p>
+                I was looking at things from my own perspective.
+                I didn't stop enough to think about how my actions
+                might have affected you.
+              </p>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SECTION 3 -->
+    <!-- ============================= -->
+
+    <section class="sorry-section section">
+
+      <div class="sorry-glow"></div>
+
+      <div class="sorry-content reveal">
+
+        <p class="eyebrow">There is something I need to say</p>
+
+        <h2>
+          I'm genuinely<br>
+          <span>sorry.</span>
+        </h2>
+
+        <div class="big-letter">
+
+          <p>
+            I'm not saying sorry just because I don't want to lose you.
+          </p>
+
+          <p>
+            I'm saying sorry because I finally understand that I hurt
+            someone who never deserved to feel that way because of me.
+          </p>
+
+          <p>
+            I wish I had realized these things earlier.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SECTION 4 -->
+    <!-- ============================= -->
+
+    <section class="section">
+
+      <div class="letter-container reveal">
+
+        <div class="letter-header">
+
+          <span>04</span>
+
+          <p class="eyebrow">
+            What I want you to know
+          </p>
+
+        </div>
+
+        <div class="paper">
+
+          <div class="paper-top">
+            <span>Dear [HER NAME],</span>
+          </div>
+
+          <div class="paper-body">
+
+            <p>
+              I can't change the moments that already happened.
+              I can't take back the times when I didn't give you the
+              time or attention you deserved.
+            </p>
+
+            <p>
+              But I can learn from them.
+            </p>
+
+            <p>
+              I can become more thoughtful, more present, and more
+              careful with your feelings.
+            </p>
+
+            <p>
+              I'm not going to make some unrealistic promise that
+              I'll never make a mistake again. I'm human, and I know
+              that relationships require understanding, patience,
+              communication, and effort.
+            </p>
+
+            <p>
+              What I can say is that I understand more now than I did
+              before.
+            </p>
+
+            <p class="signature-text">
+              And I'm truly sorry.
+            </p>
+
+            <div class="signature">
+              — [MY NAME]
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- SECTION 5 - MEMORY -->
+    <!-- ============================= -->
+
+    <section class="section memories">
+
+      <div class="section-inner column">
+
+        <div class="center-heading reveal">
+
+          <p class="eyebrow">The memories</p>
+
+          <h2>
+            The moments I don't want<br>
+            to take for granted.
+          </h2>
+
+          <p>
+            Some moments deserve to be remembered.
+          </p>
+
+        </div>
+
+
+        <div class="gallery">
+
+          <div class="photo photo-large reveal">
+            <img src="images/photo1.jpg" alt="Our memory">
+            <div class="photo-overlay">
+              <span>[PERSONAL MEMORY]</span>
+            </div>
+          </div>
+
+          <div class="photo reveal">
+            <img src="images/photo2.jpg" alt="Our memory">
+            <div class="photo-overlay">
+              <span>[PERSONAL MEMORY]</span>
+            </div>
+          </div>
+
+          <div class="photo reveal">
+            <img src="images/photo3.jpg" alt="Our memory">
+            <div class="photo-overlay">
+              <span>[PERSONAL MEMORY]</span>
+            </div>
+          </div>
+
+          <div class="photo photo-wide reveal">
+            <img src="images/photo4.jpg" alt="Our memory">
+            <div class="photo-overlay">
+              <span>[PERSONAL MEMORY]</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- NO PRESSURE -->
+    <!-- ============================= -->
+
+    <section class="section no-pressure">
+
+      <div class="no-pressure-box reveal">
+
+        <div class="soft-heart">
+          ♡
+        </div>
+
+        <p class="eyebrow">
+          Please remember this
+        </p>
+
+        <h2>
+          No pressure.
+        </h2>
+
+        <p class="large-text">
+          You don't have to forgive me immediately.
+        </p>
+
+        <p>
+          I understand if you need time.
+        </p>
+
+        <p>
+          This isn't meant to pressure you into saying yes,
+          forgetting everything, or pretending that nothing happened.
+        </p>
+
+        <p>
+          Your feelings are yours, and I respect whatever you need
+          to feel and whatever decision you make.
+        </p>
+
+        <p class="final-small">
+          I just wanted you to know that I realized my mistake.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- FINAL -->
+    <!-- ============================= -->
+
+    <section class="final-section" id="final">
+
+      <div class="final-content reveal">
+
+        <p class="eyebrow">
+          One last thing
+        </p>
+
+        <h2>
+          All I wanted was for you<br>
+          to know that I realized my mistake.
+        </h2>
+
+        <p class="final-sorry">
+          I'm sorry.<br>
+          <span>Truly.</span>
+        </p>
+
+        <button class="last-button" id="lastButton">
+          One last thing…
+        </button>
+
+        <div class="last-message" id="lastMessage">
+
+          <p>
+            Thank you for being part of my life.
+            <span>♥</span>
+          </p>
+
+          <small>
+            — [MY NAME]
+          </small>
+
+        </div>
+
+        <button class="read-again" onclick="scrollToSection('top')">
+          ↟ Read again
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Made with honesty, not perfection.
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
