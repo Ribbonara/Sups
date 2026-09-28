@@ -1,0 +1,765 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0c0a0b;
+  color: #eee8e7;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+button {
+  font-family: inherit;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+/* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+  --bg: #0c0a0b;
+  --bg-light: #151112;
+  --cream: #eee8e7;
+  --muted: #a69d9d;
+  --soft: #c7aaa4;
+  --accent: #c98e83;
+  --accent-light: #e2b7ad;
+  --line: rgba(255,255,255,0.09);
+}
+
+
+/* =========================================
+   AMBIENT BACKGROUND
+========================================= */
+
+.ambient {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.ambient-1 {
+  background: #9d5147;
+  top: -150px;
+  left: -150px;
+}
+
+.ambient-2 {
+  background: #6e4355;
+  right: -200px;
+  bottom: 10%;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  from {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0.5;
+  }
+
+  80% {
+    opacity: 0.3;
+  }
+
+  to {
+    transform: translateY(-10vh);
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+h1 {
+  font-size: clamp(4rem, 10vw, 8rem);
+}
+
+h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+}
+
+h3 {
+  font-size: 1.7rem;
+}
+
+.eyebrow {
+  color: var(--accent-light);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.68rem;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+p {
+  color: var(--muted);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 span {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
+.hero-subtitle {
+  margin: 35px auto;
+  font-size: 1rem;
+  max-width: 400px;
+}
+
+.continue-btn,
+.last-button {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  color: var(--cream);
+  padding: 16px 25px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.continue-btn span {
+  margin-left: 12px;
+}
+
+.continue-btn:hover,
+.last-button:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-3px);
+  border-color: rgba(255,255,255,0.3);
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+  padding: 150px 7vw;
+  position: relative;
+}
+
+.section-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 60px;
+}
+
+.section-inner.column {
+  display: block;
+}
+
+.section-number {
+  color: var(--accent);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
+
+.section-content {
+  max-width: 850px;
+}
+
+.section-content h2 {
+  margin-bottom: 50px;
+}
+
+.letter-text {
+  max-width: 720px;
+}
+
+.letter-text p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: var(--cream) !important;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.7rem !important;
+}
+
+
+/* =========================================
+   CENTER HEADING
+========================================= */
+
+.center-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 80px;
+}
+
+.center-heading h2 {
+  margin-bottom: 25px;
+}
+
+.center-heading > p:last-child {
+  max-width: 500px;
+  margin: auto;
+}
+
+
+/* =========================================
+   MISTAKE CARDS
+========================================= */
+
+.mistake-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.mistake-card {
+  padding: 35px;
+  min-height: 220px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.025);
+  cursor: pointer;
+  transition: 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.mistake-card:hover {
+  border-color: rgba(201,142,131,0.4);
+  transform: translateY(-5px);
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-bottom: 45px;
+}
+
+.plus {
+  font-size: 1.3rem;
+  transition: transform 0.4s ease;
+}
+
+.mistake-card.active .plus {
+  transform: rotate(45deg);
+}
+
+.mistake-card h3 {
+  max-width: 450px;
+}
+
+.card-hidden {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
+.mistake-card.active .card-hidden {
+  max-height: 200px;
+}
+
+.card-hidden p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   SORRY SECTION
+========================================= */
+
+.sorry-section {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.sorry-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(164,83,72,0.15);
+  filter: blur(130px);
+  border-radius: 50%;
+}
+
+.sorry-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+}
+
+.sorry-content h2 span {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
+.big-letter {
+  max-width: 600px;
+  margin: 50px auto 0;
+}
+
+.big-letter p {
+  margin-bottom: 25px;
+  font-size: 1.05rem;
+}
+
+
+/* =========================================
+   LETTER
+========================================= */
+
+.letter-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.letter-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.letter-header span {
+  color: var(--accent);
+}
+
+.paper {
+  background: #eee8df;
+  color: #292323;
+  padding: clamp(35px, 7vw, 90px);
+  position: relative;
+  box-shadow: 0 30px 100px rgba(0,0,0,0.35);
+}
+
+.paper p {
+  color: #4d4543;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  line-height: 1.65;
+  margin-bottom: 25px;
+}
+
+.paper-top {
+  color: #6b5c58;
+  font-family: "Cormorant Garamond", serif;
+  margin-bottom: 50px;
+  font-size: 1.3rem;
+}
+
+.signature-text {
+  margin-top: 60px;
+}
+
+.signature {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  font-style: italic;
+  color: #403634;
+}
+
+
+/* =========================================
+   GALLERY
+========================================= */
+
+.gallery {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.photo {
+  height: 430px;
+  position: relative;
+  overflow: hidden;
+  background: #181415;
+}
+
+.photo-large {
+  height: 550px;
+}
+
+.photo-wide {
+  grid-column: span 2;
+  height: 450px;
+}
+
+.photo img {
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: transform 1s ease, filter 1s ease;
+}
+
+.photo:hover img {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+
+.photo-overlay {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 35px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.75));
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s ease;
+}
+
+.photo:hover .photo-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.photo-overlay span {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+}
+
+
+/* =========================================
+   NO PRESSURE
+========================================= */
+
+.no-pressure {
+  display: flex;
+  justify-content: center;
+}
+
+.no-pressure-box {
+  max-width: 700px;
+  text-align: center;
+  padding: 90px 40px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.soft-heart {
+  font-size: 3rem;
+  color: var(--accent);
+  margin-bottom: 25px;
+}
+
+.no-pressure-box h2 {
+  margin-bottom: 35px;
+}
+
+.large-text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  color: var(--cream);
+  margin-bottom: 30px;
+}
+
+.no-pressure-box p:not(.large-text):not(.eyebrow):not(.final-small) {
+  margin-bottom: 18px;
+}
+
+.final-small {
+  margin-top: 50px;
+  color: var(--cream);
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-section {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.final-content {
+  max-width: 850px;
+}
+
+.final-content h2 {
+  margin-bottom: 60px;
+}
+
+.final-sorry {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  color: var(--cream);
+  margin-bottom: 50px;
+}
+
+.final-sorry span {
+  color: var(--accent-light);
+  font-style: italic;
+}
+
+.last-message {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 1s ease;
+}
+
+.last-message.show {
+  max-height: 200px;
+  opacity: 1;
+  margin-top: 50px;
+}
+
+.last-message p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--cream);
+}
+
+.last-message p span {
+  color: var(--accent-light);
+}
+
+.last-message small {
+  display: block;
+  margin-top: 15px;
+  color: var(--muted);
+}
+
+.read-again {
+  display: block;
+  margin: 70px auto 0;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.read-again:hover {
+  color: var(--cream);
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.music-toggle {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: rgba(20,17,18,0.8);
+  backdrop-filter: blur(10px);
+  color: var(--cream);
+  z-index: 100;
+  cursor: pointer;
+}
+
+.music-toggle.active {
+  border-color: var(--accent);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #665f60;
+  font-size: 0.7rem;
+}
+
+
+/* =========================================
+   REVEAL ANIMATION
+========================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .section {
+    padding: 100px 22px;
+  }
+
+  .section-inner {
+    display: block;
+  }
+
+  .section-number {
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+  }
+
+  .mistake-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mistake-card {
+    min-height: 200px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .photo,
+  .photo-large,
+  .photo-wide {
+    grid-column: auto;
+    height: 400px;
+  }
+
+  .paper {
+    padding: 35px 25px;
+  }
+
+  .paper p {
+    font-size: 1.2rem;
+  }
+
+  .sorry-section {
+    min-height: 80vh;
+  }
+
+  .final-content h2 {
+    font-size: 3rem;
+  }
+
+  .final-sorry {
+    font-size: 2rem;
+  }
+
+  .no-pressure-box {
+    padding: 70px 10px;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+}
